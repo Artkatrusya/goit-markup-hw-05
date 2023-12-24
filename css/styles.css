@@ -702,8 +702,6 @@ a:hover {
   fill: #ffffff;
 }
 
-
-
 .modal-title {
   width: 360px;
   color: #2E2F42;
@@ -837,7 +835,6 @@ a:hover {
 }
 
 .custom-icon {
-  display: inline-flex;
   justify-content: center;
   align-items: center;
 
@@ -850,6 +847,8 @@ a:hover {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: transparent;
   cursor: pointer;
+
+  display: inline-flex;
 }
 
 .checkbox:checked+.modal-check> .custom-icon {
