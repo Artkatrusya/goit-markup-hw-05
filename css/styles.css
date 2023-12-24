@@ -558,6 +558,7 @@ a:hover {
 
 .footer-field {
   display: flex;
+  gap: 24px;
 }
 
 .footer-input {
@@ -568,7 +569,6 @@ a:hover {
   border: 1px solid #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background: transparent;
-  margin-right: 24px;
 
   color: #FFF;
   font-size: 12px;
@@ -690,6 +690,11 @@ a:hover {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-btn:active+ .modal-icon,
+.modal-btn:hover+ .modal-icon,
+.modal-btn:focus+ .modal-icon {
+  fill: #ffffff;
+}
 .modal-btn:active,
 .modal-btn:hover,
 .modal-btn:focus {
@@ -734,6 +739,10 @@ a:hover {
 
 .modal-fields {
   margin-bottom: 8px;
+}
+
+.modal-fields-textarea {
+  margin-bottom: 16px;
 }
 
 .modal-label {
@@ -782,10 +791,10 @@ a:hover {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:active+.form-icon,
-.form-input:focus+.form-icon,
-.form-input:hover+.form-icon {
-  color: #4D5AE5;
+.form-input:active+ .form-icon,
+.form-input:focus+ .form-icon,
+.form-input:hover+ .form-icon {
+  fill: #4D5AE5;
 }
 
 .modal-textarea {
@@ -808,7 +817,7 @@ a:hover {
 .modal-textarea:focus,
 .modal-textarea:active,
 .modal-textarea:hover {
-  color: #4D5AE5;
+  border-color: #4D5AE5;
 }
 
 .modal-fields-checkbox {
@@ -841,20 +850,24 @@ a:hover {
 }
 
 .custom-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
   width: 16px;
   height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.40);
+
   border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.40);
+  
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   fill: transparent;
+  cursor: pointer;
 }
 
-.chechbox:checked+.custom-icon {
+.checkbox:checked+.modal-check> .custom-icon {
   background-color: #404bbf;
   border: none;
   fill: #F4F4FD;
